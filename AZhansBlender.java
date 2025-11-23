@@ -1,31 +1,25 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class AZhansBlender {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        PrintWriter pw = new PrintWriter(System.out);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        int t = Integer.parseInt(br.readLine());
+        int t = sc.nextInt();
         while (t-- > 0) {
-            long n = Long.parseLong(br.readLine());
-
-            StringTokenizer st = new StringTokenizer(br.readLine());
-            long x = Long.parseLong(st.nextToken());
-            long y = Long.parseLong(st.nextToken());
+            long n = sc.nextLong();
+            long x = sc.nextLong();
+            long y = sc.nextLong();
 
             long rate = Math.min(x, y);
 
             if (n <= 0) {
-                pw.println(0);
+                System.out.println(0);
             } else {
                 long time = (n + rate - 1) / rate;
-                pw.println(time);
+                System.out.println(time);
             }
         }
-        pw.flush();
+
+        sc.close();
     }
 }
