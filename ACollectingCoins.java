@@ -1,14 +1,17 @@
 import java.util.*;
 public class ACollectingCoins {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
-        while(t-- > 0){
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            int c = sc.nextInt();
-            int n = sc.nextInt();
-            System.out.println((a+b+c+n)%3==0?"YES":"NO");
-        }
+            Scanner sc = new Scanner(System.in);
+            int t = sc.nextInt();
+            while (t-- > 0) {
+                long a = sc.nextLong();
+                long b = sc.nextLong();
+                long c = sc.nextLong();
+                long n = sc.nextLong();
+                long mx = Math.max(a, Math.max(b, c));
+                long need = (mx - a) + (mx - b) + (mx - c);
+                if (n >= need && (n - need) % 3 == 0) System.out.println("YES");
+                else System.out.println("NO");
+            }
     }
 }
