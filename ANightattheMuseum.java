@@ -4,7 +4,6 @@ public class ANightattheMuseum {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
-        scanner.close();
 
         char current = 'a';
         int totalRotations = 0;
