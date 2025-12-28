@@ -10,6 +10,5 @@ public class AMaximize {
             sb.append(x - 1).append('\n');
         }
         System.out.print(sb.toString());
-        sc.close();
     }
 }
